@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="body flex">
+    <header class="header">
+        <a class="header__logo" href="#">
+            <img src="./img/Logo-desktop.png" alt="Логотип">
+        </a>
+        <span class="header__line"></span>
+        <ul class="header__nav list-reset header-tabs is-active">
+            <li class="header__link links header-tabs__item" data-tab-name="header-tab-1">
+                <a class="link">
+                    <span class="numbers">00</span>
+                    HOME
+                </a>
+            </li>
+            <li class="header__link links header-tabs__item" data-tab-name="header-tab-2">
+                <a class="link">
+                    <span class="numbers">01</span>
+                    DESTINATION
+                </a>
+            </li>
+            <li class="header__link links header-tabs__item" data-tab-name="header-tab-3">
+                <a class="link">
+                    <span class="numbers">02</span>
+                    CREW
+                </a>
+            </li>
+            <li class="header__link links header-tabs__item" data-tab-name="header-tab-4">
+                <a class="link">
+                    <span class="numbers">03</span>
+                    TECHNOLOGY
+                </a>
+            </li>
+        </ul>
+        <img src="./img/sound.gif" alt="Alt" class="soundbutton paused">
+        <audio src="/media/ambient.mp3" class="audio" loop></audio>
+    </header>
+    <main class="container flex">
+        <section class="home flex tab-chapter header-tab-1 is-active" data-image="img/Bitmap.jpg">
+            <div class="space flex">
+                <p class="start">SO, YOU WANT TO TRAVEL TO</p>
+                <h1 class="title">SPACE</h1>
+                <p class="descr">Let&rsquo;s face&nbsp;it; if&nbsp;you want to&nbsp;go&nbsp;to&nbsp;space, you might
+                    as&nbsp;well genuinely go&nbsp;to&nbsp;outer space and not hover kind of&nbsp;on&nbsp;the edge
+                    of&nbsp;it. Well sit back, and relax because we&rsquo;ll give you a&nbsp;truly out of&nbsp;this
+                    world experience!</p>
+            </div>
+            <button class="btn">EXPLORE</button>
+        </section>
+        <section class="destination flex tab-chapter header-tab-2" data-image="img/destination/fon_planets.jpg">
+            <div class="general flex">
+                <span class="general__number">01</span>
+                <p class="general__descr">PICK YOUR DESTINATION</p>
+            </div>
+            <div class="planets">
+                <ul class="planets__nav list-reset flex">
+                    <li class="planets__item links" data-tab-name="planet-tab-1">MOON</li>
+                    <li class="planets__item links" data-tab-name="planet-tab-2">MARS</li>
+                    <li class="planets__item links" data-tab-name="planet-tab-3">EUROPA</li>
+                    <li class="planets__item links" data-tab-name="planet-tab-4">TITAN</li>
+                </ul>
+                <div class="planets-tabs">
+                    <div class="tab-planet flex tab-chapter planet-tab-1" id="moon">
+                        <img class="planet-image" src="./img/destination/image-moon.png" alt="Луна">
+                        <div class="planet">
+                            <h2 class="planet__name">MOON</h2>
+                            <p class="planet__descr">See our planet as&nbsp;you&rsquo;ve never seen it&nbsp;before.
+                                A&nbsp;perfect relaxing trip away to&nbsp;help regain perspective and come back
+                                refreshed. While you&rsquo;re there, take in&nbsp;some history by&nbsp;visiting the
+                                Luna 2&nbsp;and Apollo 11&nbsp;landing sites.</p>
+                            <div class="details flex">
+                                <div class="distance">
+                                    <p class="distance__descr">AVG. DISTANCE</p>
+                                    <p class="distance__value">384,400 KM</p>
+                                </div>
+                                <div class="flight">
+                                    <p class="flight__descr">EST.TRAVEL TIME</p>
+                                    <p class="flight__time">3&nbsp;DAYS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-planet flex tab-chapter planet-tab-2" id="mars">
+                        <img class="planet-image" src="./img/destination/image-mars.png" alt="Марс">
+                        <div class="planet">
+                            <h2 class="planet__name">MARS</h2>
+                            <p class="planet__descr">Don&rsquo;t forget to&nbsp;pack your hiking boots. You&rsquo;ll
+                                need them to&nbsp;tackle Olympus Mons, the tallest planetary mountain in&nbsp;our
+                                solar system. It&rsquo;s two and a&nbsp;half times the size of&nbsp;Everest!</p>
+                            <div class="details flex">
+                                <div class="distance">
+                                    <p class="distance__descr">AVG. DISTANCE</p>
+                                    <p class="distance__value">225&nbsp;MIL. KM</p>
+                                </div>
+                                <div class="flight">
+                                    <p class="flight__descr">EST.TRAVEL TIME</p>
+                                    <p class="flight__time">9&nbsp;MONTHS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-planet flex tab-chapter planet-tab-3" id="europa">
+                        <img class="planet-image" src="./img/destination/image-europa.png" alt="Европа">
+                        <div class="planet">
+                            <h2 class="planet__name">EUROPA</h2>
+                            <p class="planet__descr">The smallest of&nbsp;the four Galilean moons orbiting Jupiter,
+                                Europa is&nbsp;a&nbsp;winter lover&rsquo;s dream. With an&nbsp;icy surface,
+                                it&rsquo;s perfect for a&nbsp;bit of&nbsp;ice skating, curling, hockey,
+                                or&nbsp;simple relaxation in&nbsp;your snug wintery cabin.</p>
+                            <div class="details flex">
+                                <div class="distance">
+                                    <p class="distance__descr">AVG. DISTANCE</p>
+                                    <p class="distance__value">628 MIL. KM</p>
+                                </div>
+                                <div class="flight">
+                                    <p class="flight__descr">EST.TRAVEL TIME</p>
+                                    <p class="flight__time">3&nbsp;YEARS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-planet flex tab-chapter planet-tab-4" id="titan">
+                        <img class="planet-image" src="./img/destination/image-titan.png" alt="Титан">
+                        <div class="planet">
+                            <h2 class="planet__name">TITAN</h2>
+                            <p class="planet__descr">The only moon known to&nbsp;have a&nbsp;dense atmosphere other
+                                than Earth, Titan is&nbsp;a&nbsp;home away from home (just a&nbsp;few hundred
+                                degrees colder!). As&nbsp;a&nbsp;bonus, you get striking views of&nbsp;the Rings
+                                of&nbsp;Saturn.</p>
+                            <div class="details flex">
+                                <div class="distance">
+                                    <p class="distance__descr">AVG. DISTANCE</p>
+                                    <p class="distance__value">1.6 BIL. KM</p>
+                                </div>
+                                <div class="flight">
+                                    <p class="flight__descr">EST.TRAVEL TIME</p>
+                                    <p class="flight__time">7&nbsp;DAYS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="crew tab-chapter header-tab-3" data-image="img/crew/fon_crew.jpg">
+            <div class="tab-chapter tab-participant participant-tab-1" id="hurley">
+                <div class="general flex">
+                    <div class="flex">
+                        <span class="general__number">02</span>
+                        <p class="general__descr">MEET YOUR CREW</p>
+                    </div>
+                    <div class="flex">
+                        <div class="participant">
+                            <p class="job-title">COMMANDER</p>
+                            <h2 class="participant__name">DOUGLAS HURLEY</h2>
+                            <p class="participant__descr">Douglas Gerald Hurley is&nbsp;an&nbsp;American engineer,
+                                former
+                                Marine Corps pilot and former NASA astronaut. He launched into space for the third
+                                time as commander of Crew Dragon Demo-2.</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="tab-participant__image" src="./img/crew/image-douglas-hurley.png" alt="Douglas Hurley">
+                <ul class="tab-participant__nav list-reset flex">
+                    <li class="tab-participant__item is-open" id="part-1" data-tab-name="participant-tab-1"></li>
+                    <li class="tab-participant__item" data-tab-name="participant-tab-2"></li>
+                    <li class="tab-participant__item" data-tab-name="participant-tab-3"></li>
+                    <li class="tab-participant__item" data-tab-name="participant-tab-4"></li>
+                </ul>
+            </div>
+            <div class="tab-chapter tab-participant participant-tab-2">
+                <div class="general flex">
+                    <div class="flex">
+                        <span class="general__number">02</span>
+                        <p class="general__descr">MEET YOUR CREW</p>
+                    </div>
+                    <div class="flex">
+                        <div class="participant">
+                            <p class="job-title">MISSION SPECIALIST</p>
+                            <h2 class="participant__name">MARK SHUTTLEWORTH</h2>
+                            <p class="participant__descr">Mark Richard Shuttleworth is&nbsp;the founder and CEO
+                                of&nbsp;Canonical, the company behind the Linux-based Ubuntu operating system.
+                                Shuttleworth became the first South African to&nbsp;travel to&nbsp;space
+                                as&nbsp;a&nbsp;space tourist.</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="tab-participant__image" src="./img/crew/image-mark-shuttleworth.png"
+                    alt="Mark Shuttleworth">
+                <ul class="tab-participant__nav list-reset flex">
+                    <li class="tab-participant__item" data-tab-name="participant-tab-1"></li>
+                    <li class="tab-participant__item"  id="part-2" data-tab-name="participant-tab-2"></li>
+                    <li class="tab-participant__item" data-tab-name="participant-tab-3"></li>
+                    <li class="tab-participant__item" data-tab-name="participant-tab-4"></li>
+                </ul>
+            </div>
+            <div class="tab-chapter tab-participant participant-tab-3">
+                <div class="general flex">
+                    <div class="flex">
+                        <span class="general__number">02</span>
+                        <p class="general__descr">MEET YOUR CREW</p>
+                    </div>
+                    <div class="flex">
+                        <div class="participant">
+                            <p class="job-title">PILOT</p>
+                            <h2 class="participant__name">VICTOR GLOVER</h2>
+                            <p class="participant__descr">Pilot on&nbsp;the first operational flight of&nbsp;the SpaceX
+                                Crew Dragon to&nbsp;the International Space Station. Glover is&nbsp;a&nbsp;commander
+                                in&nbsp;the U.S. Navy where he&nbsp;pilots an&nbsp;F/A-18.He was a&nbsp;crew member
+                                of&nbsp;Expedition&nbsp;64, and served as&nbsp;a&nbsp;station systems flight engineer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <img class="tab-participant__image" src="./img/crew/image-victor-glover.png" alt="Victor Glover">
+                <ul class="tab-participant__nav list-reset flex">
+                    <li class="tab-participant__item" data-tab-name="participant-tab-1"></li>
+                    <li class="tab-participant__item" data-tab-name="participant-tab-2"></li>
+                    <li class="tab-participant__item" id="part-3" data-tab-name="participant-tab-3"></li>
+                    <li class="tab-participant__item" data-tab-name="participant-tab-4"></li>
+                </ul>
+            </div>
+            <div class="tab-chapter tab-participant participant-tab-4">
+                <div class="general flex">
+                    <div class="flex">
+                        <span class="general__number">02</span>
+                        <p class="general__descr">MEET YOUR CREW</p>
+                    </div>
+                    <div class="flex">
+                        <div class="participant">
+                            <p class="job-title">FLIGHT ENGINEER</p>
+                            <h2 class="participant__name">ANOUSHEH ANSARI</h2>
+                            <p class="participant__descr">Anousheh Ansari is&nbsp;an&nbsp;Iranian American engineer and
+                                co-founder of&nbsp;Prodea Systems. Ansari was the fourth self-funded space tourist, the
+                                first self-funded woman to&nbsp;fly to&nbsp;the ISS, and the first Iranian
+                                in&nbsp;space.</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="tab-participant__image" src="./img/crew/image-anousheh-ansari.png" alt="Anousheh Ansari">
+                <ul class="tab-participant__nav list-reset flex">
+                    <li class="tab-participant__item" data-tab-name="participant-tab-1"></li>
+                    <li class="tab-participant__item" data-tab-name="participant-tab-2"></li>
+                    <li class="tab-participant__item" data-tab-name="participant-tab-3"></li>
+                    <li class="tab-participant__item" id="part-4" data-tab-name="participant-tab-4"></li>
+                </ul>
+            </div>
+        </section>
+        <section class="technologys tab-chapter header-tab-4" data-image="img/technology/fon_technology.jpg">
+            <div class="tab-chapter tab-technology technology-tab-1" id="spaceport">
+                <div class="general flex">
+                    <div class="flex">
+                        <span class="general__number">03</span>
+                        <p class="general__descr">SPACE LAUNCH 101</p>
+                    </div>
+                    <div class="tab-technology__content flex">
+                        <ul class="tab-technology__nav list-reset flex">
+                            <li class="tab-technology__item is-open" id="tech-1" data-tab-name="technology-tab-1">1</li>
+                            <li class="tab-technology__item" data-tab-name="technology-tab-2">2</li>
+                            <li class="tab-technology__item" data-tab-name="technology-tab-3">3</li>
+                        </ul>
+                        <div class="technology flex">
+                            <p class="technology__title">THE TERMINOLOGY…</p>
+                            <h2 class="technology__name">LAUNCH&nbsp;VEHICLE</h2>
+                            <p class="technology__descr">A&nbsp;launch vehicle or&nbsp;carrier rocket
+                                is&nbsp;a&nbsp;rocket-propelled vehicle used to&nbsp;carry a&nbsp;payload from
+                                Earth&rsquo;s surface to&nbsp;space, usually to&nbsp;Earth orbit or&nbsp;beyond. Our
+                                WEB-X carrier rocket is&nbsp;the most powerful in&nbsp;operation. Standing 150 metres
+                                tall, it&rsquo;s quite an&nbsp;awe-inspiring sight on&nbsp;the launch pad!</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="tab-technology__image" src="./img/technology/image-launch-vehicle-portrait.jpg"
+                    alt="Spaceport">
+            </div>
+            <div class="tab-chapter tab-technology technology-tab-2">
+                <div class="general flex">
+                    <div class="flex">
+                        <span class="general__number">03</span>
+                        <p class="general__descr">SPACE LAUNCH 101</p>
+                    </div>
+                    <div class="tab-technology__content flex">
+                        <ul class="tab-technology__nav list-reset flex">
+                            <li class="tab-technology__item" data-tab-name="technology-tab-1">1</li>
+                            <li class="tab-technology__item" id="tech-2" data-tab-name="technology-tab-2">2</li>
+                            <li class="tab-technology__item" data-tab-name="technology-tab-3">3</li>
+                        </ul>
+                        <div class="technology flex">
+                            <p class="technology__title">THE TERMINOLOGY…</p>
+                            <h2 class="technology__name">SPACEPORT</h2>
+                            <p class="technology__descr">A&nbsp;spaceport or&nbsp;cosmodrome is&nbsp;a&nbsp;site for
+                                launching (or&nbsp;receiving) spacecraft, by&nbsp;analogy to&nbsp;the seaport for ships
+                                or&nbsp;airport for aircraft. Based in&nbsp;the famous Cape Canaveral, our spaceport
+                                is&nbsp;ideally situated to&nbsp;take advantage of&nbsp;the Earth&rsquo;s rotation for
+                                launch.</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="tab-technology__image" src="./img/technology/image-spaceport-portrait.jpg" alt="Spaceport">
+            </div>
+            <div class="tab-chapter tab-technology technology-tab-3">
+                <div class="general flex">
+                    <div class="flex">
+                        <span class="general__number">03</span>
+                        <p class="general__descr">SPACE LAUNCH 101</p>
+                    </div>
+                    <div class="tab-technology__content flex">
+                        <ul class="tab-technology__nav list-reset flex">
+                            <li class="tab-technology__item" data-tab-name="technology-tab-1">1</li>
+                            <li class="tab-technology__item" data-tab-name="technology-tab-2">2</li>
+                            <li class="tab-technology__item" id="tech-3" data-tab-name="technology-tab-3">3</li>
+                        </ul>
+                        <div class="technology flex">
+                            <p class="technology__title">THE TERMINOLOGY…</p>
+                            <h2 class="technology__name">SPACE&nbsp;CAPSULE</h2>
+                            <p class="technology__descr">A&nbsp;space capsule is&nbsp;an&nbsp;often-crewed spacecraft
+                                that uses a&nbsp;blunt-body reentry capsule to&nbsp;reenter the Earth&rsquo;s atmosphere
+                                without wings. Our capsule is&nbsp;where you&rsquo;ll spend your time during the flight.
+                                It&nbsp;includes a&nbsp;space gym, cinema, and plenty of&nbsp;other activities
+                                to&nbsp;keep you entertained.</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="tab-technology__image" src="./img/technology/image-space-capsule-portrait.jpg"
+                    alt="Spaceport">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

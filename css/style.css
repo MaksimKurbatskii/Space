@@ -1,0 +1,549 @@
+@font-face {
+    font-family: 'Barlow Condensed';
+    src: url('/fons/BarlowCondensed-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Barlow Condensed';
+    src: url('/fons/BarlowCondensed-SemiBold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Bellefair-Regular';
+    src: url('/fons/Bellefair-Regular.ttf');
+    font-weight: 400;
+}
+
+@keyframes open {
+    0% {
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes animSound {
+    0% {
+        outline: 0 solid var(--ligth);
+    }
+
+    50% {
+        outline: 10px solid var(--ligth);
+    }
+    100% {
+        outline: 0 solid var(--ligth);
+    }
+}
+
+:root {
+    --text-color: #fff;
+    --ligth: #D0D6F9;
+    --ligth-gray: #C5C5C8;
+    --gap-big: 165px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.body {
+    flex-direction: column;
+    padding-top: 42px;
+    background-image: url(/img/Bitmap.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Barlow Condensed', 'sans-serif';
+    color: var(--text-color);
+    transition: background 1s ease-in-out;
+}
+
+.links {
+    letter-spacing: 2.7px;
+    color: var(--ligth);
+}
+
+.tab-chapter {
+    display: none;
+    height: 0;
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
+}
+
+.is-active {
+    display: flex;
+    height: 100%;
+    opacity: 1;
+    animation-name: open;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.header__logo {
+    margin-left: 56px;
+}
+
+.header__line {
+    position: absolute;
+    left: 167px;
+    z-index: 1;
+    width: 473px;
+    height: 1px;
+    background-color: var(--text-color);
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    padding: 39px 165px 0 123px;
+    width: 542px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+    color: var(--text-color);
+    transition: color .3s ease-in-out, border .3s ease-in-out;
+}
+
+.header__link {
+    padding-bottom: 36px;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: border .3s ease-in-out;
+}
+
+.header__link:not(:last-child) {
+    margin-right: 48px;
+}
+
+.link {
+    transition: color .3s ease-in-out;
+}
+
+.link:visited {
+    color: var(--ligth-gray);
+}
+
+.header__link:hover {
+    padding-bottom: 36px;
+    border-bottom: 3px solid var(--ligth-gray);
+}
+
+.header__link:active {
+    padding-bottom: 36px;
+    border-bottom: 3px solid var(--text-color);
+}
+
+.header__link:active .link {
+    outline: 1px solid #000;
+    outline-offset: 2px;
+    color: var(--text-color);
+}
+
+.numbers {
+    margin-right: 4px;
+    font-family: 'Barlow Condensed', 'sans-serif';
+    font-weight: 700;
+}
+
+.container {
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.home {
+    justify-content: space-between;
+    padding: 250px 0 130px;
+    width: 1110px;
+}
+
+.space {
+    flex-direction: column;
+    width: 450px;
+    height: 380px;
+}
+
+.start {
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 4.7px;
+}
+
+.title {
+    margin: 27px 0 22px;
+    font-family: 'Bellefair-Regular';
+    font-size: 150px;
+    font-weight: 100;
+}
+
+.descr {
+    font-family: 'Barlow Condensed', 'sans-serif';
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 1.2px;
+    word-spacing: 1.5px;
+}
+
+.btn {
+    margin-top: auto;
+    width: 274px;
+    height: 274px;
+    border: none;
+    border-radius: 50%;
+    font-family: 'Bellefair-Regular';
+    font-size: 32px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: outline .5s ease-in-out, opacity .3s ease-in-out;
+}
+
+.btn:hover {
+    outline: 88px solid #24262F;
+    opacity: 0.5;
+}
+
+.destination {
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 73px 0 120px;
+    width: 84%;
+}
+
+.general {
+    margin-bottom: 66px;
+    font-size: 28px;
+    letter-spacing: 4.7px;
+}
+
+.general__number {
+    margin-right: 27px;
+}
+
+.planets__nav {
+    justify-content: flex-end;
+    margin-right: 162px;
+}
+
+.planets__item {
+    padding-bottom: 12px;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: border .3s ease-in-out;
+}
+
+.planets__item:hover {
+    border-bottom: 3px solid #85868B;
+}
+
+.planets__item:active {
+    border-bottom: 3px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.planets__item:focus {
+    color: var(--text-color);
+}
+
+.planets__item:not(:last-child) {
+    margin-right: 32px;
+}
+
+.tab-planet {
+    justify-content: space-between;
+}
+
+.planet {
+    max-width: 442px;
+}
+
+.planet-image {
+    margin-left: 65px;
+}
+
+.planet__name {
+    margin: 38px 0 12px;
+    font-family: 'Bellefair-Regular';
+    font-size: 100px;
+    font-weight: 100;
+}
+
+.planet__descr {
+    padding-bottom: 54px;
+    border-bottom: 1px solid #383B4B;
+    font-size: 18px;
+    line-height: 32px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    word-spacing: -2px;
+}
+
+.details {
+    margin-top: 30px;
+}
+
+.distance {
+    margin-right: 80px;
+}
+
+.distance__descr,
+.flight__descr {
+    margin-bottom: 12px;
+    font-size: 14px;
+    letter-spacing: 2.4px;
+}
+
+.distance__value,
+.flight__time {
+    font-family: 'Bellefair-Regular';
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 32px;
+}
+
+.crew {
+    padding-top: 75px;
+    width: 84%;
+}
+
+.crew .tab-chapter {
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.crew .general {
+    flex-direction: column;
+}
+
+.participant {
+    width: 615px;
+}
+
+.crew .general__number {
+    margin-right: 17px;
+}
+
+.job-title {
+    padding-top: 156px;
+    font-family: 'Bellefair-Regular';
+    font-size: 32px;
+    font-weight: 100;
+    letter-spacing: 0;
+}
+
+.participant__name {
+    padding-top: 15px;
+    font-family: 'Bellefair-Regular';
+    font-size: 56px;
+    font-weight: 100;
+    letter-spacing: 0;
+}
+
+.participant__descr {
+    padding-top: 25px;
+    width: 440px;
+    font-family: 'Barlow Condensed', 'sans-serif';
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 1.6px;
+    word-spacing: 1.6px;
+}
+
+.tab-participant__nav {
+    position: absolute;
+    bottom: 92px;
+    left: 0;
+    padding-top: 120px;
+}
+
+.tab-participant__item {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #363641;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+}
+
+.tab-participant__item:not(:last-child) {
+    margin-right: 25px;
+}
+
+.tab-participant__item:hover {
+    background-color: var(--ligth-gray);
+}
+
+.tab-participant__item:active {
+    background-color: var(--text-color);
+}
+
+.tab-participant__image {
+    height: 686px;
+}
+
+.technologys {
+    padding: 73px 0 120px;
+    width: 84%;
+}
+
+.tab-technology {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tab-technology .general {
+    flex-direction: column;
+}
+
+.tab-technology .general__number {
+    margin-right: 20px;
+}
+
+.tab-technology__content {
+    justify-content: space-between;
+    padding-top: 135px;
+    width: 630px;
+}
+
+.tab-technology__nav {
+    flex-direction: column;
+}
+
+.tab-technology__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 79px;
+    height: 79px;
+    border: 1px solid #4D4E56;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: border .3s ease-in-out, background .3s ease-in-out, color .3s ease-in-out;
+}
+
+.tab-technology__item:hover {
+    border-color: var(--text-color);
+}
+
+.tab-technology__item:active {
+    background-color: var(--text-color);
+    color: #24262F;
+}
+
+.tab-technology__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.technology {
+    flex-direction: column;
+    max-width: 470px;
+}
+
+.technology__title {
+    padding-bottom: 14px;
+    font-family: 'Barlow Condensed', 'sans-serif';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 2.70px;
+}
+
+.technology__name {
+    padding-bottom: 16px;
+    font-family: 'Bellefair-Regular';
+    font-size: 56px;
+    font-weight: 100;
+    line-height: 64px;
+    letter-spacing: 0;
+}
+
+.technology__descr {
+    font-family: 'Barlow Condensed', 'sans-serif';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 1.1px;
+    word-spacing: 2.5px;
+}
+
+.tab-technology__image {
+    margin-top: auto;
+    height: 527px;
+}
+
+.is-open {
+    display: flex;
+    opacity: 1;
+    animation-name: open;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    background-color: var(--text-color);
+    color: #24262F;
+}
+
+.soundbutton {
+    position: fixed;
+    top: 68px;
+    right: 6vh;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .25s ease;
+    animation-name: animSound;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.soundbutton.paused {
+    opacity: .25;
+}

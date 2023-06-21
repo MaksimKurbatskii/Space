@@ -1,18 +1,18 @@
 @font-face {
     font-family: 'Barlow Condensed';
-    src: url('/fons/BarlowCondensed-Regular.woff');
+    src: url('../fons/BarlowCondensed-Regular.woff');
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Barlow Condensed';
-    src: url('/fons/BarlowCondensed-SemiBold.woff');
+    src: url('../fons/BarlowCondensed-SemiBold.woff');
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Bellefair-Regular';
-    src: url('/fons/Bellefair-Regular.woff');
+    src: url('../fons/Bellefair-Regular.woff');
     font-weight: 400;
 }
 
